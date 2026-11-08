@@ -1,0 +1,2938 @@
+{
+  "controls": [
+    {
+      "name": "randomized response",
+      "profile": {
+        "channel": {
+          "neighbors": [
+            [
+              0,
+              1
+            ]
+          ],
+          "outputs": [
+            "y0",
+            "y1"
+          ],
+          "probabilities": [
+            [
+              "3/4",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "3/4"
+            ]
+          ],
+          "schema_version": 1,
+          "secrets": [
+            "s0",
+            "s1"
+          ]
+        },
+        "domain": "all finite exact multiplicative factors t >= 1, not epsilon",
+        "knots": [
+          {
+            "factor": "1",
+            "point": {
+              "delta": "1/2",
+              "factor": "1",
+              "pairs": [
+                {
+                  "delta": "1/2",
+                  "event_indices": [
+                    0
+                  ],
+                  "event_p": "3/4",
+                  "event_q": "1/4",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "1/2",
+                      "p": "3/4",
+                      "positive_part": "1/2",
+                      "q": "1/4"
+                    },
+                    {
+                      "excess": "-1/2",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "3/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                },
+                {
+                  "delta": "1/2",
+                  "event_indices": [
+                    1
+                  ],
+                  "event_p": "3/4",
+                  "event_q": "1/4",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "-1/2",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "3/4"
+                    },
+                    {
+                      "excess": "1/2",
+                      "p": "3/4",
+                      "positive_part": "1/2",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 0
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "factor": "3",
+            "point": {
+              "delta": "0",
+              "factor": "3",
+              "pairs": [
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "0",
+                      "p": "3/4",
+                      "positive_part": "0",
+                      "q": "1/4"
+                    },
+                    {
+                      "excess": "-2",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "3/4"
+                    }
+                  ],
+                  "ties": [
+                    0
+                  ],
+                  "to_index": 1
+                },
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "-2",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "3/4"
+                    },
+                    {
+                      "excess": "0",
+                      "p": "3/4",
+                      "positive_part": "0",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [
+                    1
+                  ],
+                  "to_index": 0
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "pair_curves": [
+          {
+            "from_index": 0,
+            "ratio_knots": [
+              "3"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  0
+                ],
+                "intercept": "3/4",
+                "lower": "1",
+                "slope_magnitude": "1/4",
+                "upper": "3"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "3",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 1
+          },
+          {
+            "from_index": 1,
+            "ratio_knots": [
+              "3"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  1
+                ],
+                "intercept": "3/4",
+                "lower": "1",
+                "slope_magnitude": "1/4",
+                "upper": "3"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "3",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 0
+          }
+        ],
+        "plateau": "0",
+        "plateau_pairs": [
+          0,
+          1
+        ],
+        "pure_factor": "3",
+        "ratio_grid": [
+          "1",
+          "3"
+        ],
+        "schema_version": 1,
+        "scope": "complete profile of supplied finite table and listed neighbor edges only; frontier input limited to 4 secrets / 8 outputs",
+        "segments": [
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "0",
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "3"
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "0",
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "3"
+                  }
+                ],
+                "pair_index": 1
+              }
+            ],
+            "intercept": "3/4",
+            "interior_worst_pairs": [
+              0,
+              1
+            ],
+            "lower": "1",
+            "slope_magnitude": "1/4",
+            "upper": "3"
+          },
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "3",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "3",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 1
+              }
+            ],
+            "intercept": "0",
+            "interior_worst_pairs": [
+              0,
+              1
+            ],
+            "lower": "3",
+            "slope_magnitude": "0",
+            "upper": null
+          }
+        ],
+        "unlisted_secret_pairs": []
+      },
+      "queries": [
+        {
+          "factor": "3",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "intercept": "3/4",
+            "interval_lower": "1",
+            "interval_upper": "3",
+            "kind": "positive_left_slope",
+            "root": "3",
+            "slope_magnitude": "1/4",
+            "supporting_pair_indices": [
+              0,
+              1
+            ]
+          },
+          "point": {
+            "delta": "0",
+            "factor": "3",
+            "pairs": [
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "0",
+                    "p": "3/4",
+                    "positive_part": "0",
+                    "q": "1/4"
+                  },
+                  {
+                    "excess": "-2",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/4"
+                  }
+                ],
+                "ties": [
+                  0
+                ],
+                "to_index": 1
+              },
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "-2",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/4"
+                  },
+                  {
+                    "excess": "0",
+                    "p": "3/4",
+                    "positive_part": "0",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [
+                  1
+                ],
+                "to_index": 0
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "0",
+          "within_point_audit_domain": true
+        },
+        {
+          "factor": "2",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "intercept": "3/4",
+            "interval_lower": "1",
+            "interval_upper": "3",
+            "kind": "positive_left_slope",
+            "root": "2",
+            "slope_magnitude": "1/4",
+            "supporting_pair_indices": [
+              0,
+              1
+            ]
+          },
+          "point": {
+            "delta": "1/4",
+            "factor": "2",
+            "pairs": [
+              {
+                "delta": "1/4",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "3/4",
+                "event_q": "1/4",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "1/4",
+                    "p": "3/4",
+                    "positive_part": "1/4",
+                    "q": "1/4"
+                  },
+                  {
+                    "excess": "-5/4",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              },
+              {
+                "delta": "1/4",
+                "event_indices": [
+                  1
+                ],
+                "event_p": "3/4",
+                "event_q": "1/4",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "-5/4",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/4"
+                  },
+                  {
+                    "excess": "1/4",
+                    "p": "3/4",
+                    "positive_part": "1/4",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 0
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "1/4",
+          "within_point_audit_domain": true
+        },
+        {
+          "factor": "1",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "kind": "domain_lower_bound",
+            "lower_factor": "1"
+          },
+          "point": {
+            "delta": "1/2",
+            "factor": "1",
+            "pairs": [
+              {
+                "delta": "1/2",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "3/4",
+                "event_q": "1/4",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "1/2",
+                    "p": "3/4",
+                    "positive_part": "1/2",
+                    "q": "1/4"
+                  },
+                  {
+                    "excess": "-1/2",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              },
+              {
+                "delta": "1/2",
+                "event_indices": [
+                  1
+                ],
+                "event_p": "3/4",
+                "event_q": "1/4",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "-1/2",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/4"
+                  },
+                  {
+                    "excess": "1/2",
+                    "p": "3/4",
+                    "positive_part": "1/2",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 0
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "1/2",
+          "within_point_audit_domain": true
+        }
+      ]
+    },
+    {
+      "name": "singular plateau",
+      "profile": {
+        "channel": {
+          "neighbors": [
+            [
+              0,
+              1
+            ]
+          ],
+          "outputs": [
+            "y0",
+            "y1",
+            "y2"
+          ],
+          "probabilities": [
+            [
+              "1/2",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "schema_version": 1,
+          "secrets": [
+            "s0",
+            "s1"
+          ]
+        },
+        "domain": "all finite exact multiplicative factors t >= 1, not epsilon",
+        "knots": [
+          {
+            "factor": "1",
+            "point": {
+              "delta": "1/2",
+              "factor": "1",
+              "pairs": [
+                {
+                  "delta": "1/2",
+                  "event_indices": [
+                    0
+                  ],
+                  "event_p": "1/2",
+                  "event_q": "0",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "1/2",
+                      "p": "1/2",
+                      "positive_part": "1/2",
+                      "q": "0"
+                    },
+                    {
+                      "excess": "-1/2",
+                      "p": "0",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    },
+                    {
+                      "excess": "0",
+                      "p": "1/2",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    }
+                  ],
+                  "ties": [
+                    2
+                  ],
+                  "to_index": 1
+                },
+                {
+                  "delta": "1/2",
+                  "event_indices": [
+                    1
+                  ],
+                  "event_p": "1/2",
+                  "event_q": "0",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "-1/2",
+                      "p": "0",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    },
+                    {
+                      "excess": "1/2",
+                      "p": "1/2",
+                      "positive_part": "1/2",
+                      "q": "0"
+                    },
+                    {
+                      "excess": "0",
+                      "p": "1/2",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    }
+                  ],
+                  "ties": [
+                    2
+                  ],
+                  "to_index": 0
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "pair_curves": [
+          {
+            "from_index": 0,
+            "ratio_knots": [],
+            "segments": [
+              {
+                "active_outputs": [
+                  0
+                ],
+                "intercept": "1/2",
+                "lower": "1",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "1/2",
+            "to_index": 1
+          },
+          {
+            "from_index": 1,
+            "ratio_knots": [],
+            "segments": [
+              {
+                "active_outputs": [
+                  1
+                ],
+                "intercept": "1/2",
+                "lower": "1",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "1/2",
+            "to_index": 0
+          }
+        ],
+        "plateau": "1/2",
+        "plateau_pairs": [
+          0,
+          1
+        ],
+        "pure_factor": null,
+        "ratio_grid": [
+          "1"
+        ],
+        "schema_version": 1,
+        "scope": "complete profile of supplied finite table and listed neighbor edges only; frontier input limited to 4 secrets / 8 outputs",
+        "segments": [
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 1
+              }
+            ],
+            "intercept": "1/2",
+            "interior_worst_pairs": [
+              0,
+              1
+            ],
+            "lower": "1",
+            "slope_magnitude": "0",
+            "upper": null
+          }
+        ],
+        "unlisted_secret_pairs": []
+      },
+      "queries": [
+        {
+          "factor": null,
+          "obstruction": {
+            "event_indices": [
+              0
+            ],
+            "p_mass": "1/2",
+            "pair_index": 0,
+            "q_mass": "0"
+          },
+          "point": null,
+          "reason": "target is below an invariant singular-support mass",
+          "status": "unattainable",
+          "target_delta": "1/4"
+        },
+        {
+          "factor": "1",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "kind": "domain_lower_bound",
+            "lower_factor": "1"
+          },
+          "point": {
+            "delta": "1/2",
+            "factor": "1",
+            "pairs": [
+              {
+                "delta": "1/2",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "1/2",
+                "event_q": "0",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "1/2",
+                    "p": "1/2",
+                    "positive_part": "1/2",
+                    "q": "0"
+                  },
+                  {
+                    "excess": "-1/2",
+                    "p": "0",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  },
+                  {
+                    "excess": "0",
+                    "p": "1/2",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [
+                  2
+                ],
+                "to_index": 1
+              },
+              {
+                "delta": "1/2",
+                "event_indices": [
+                  1
+                ],
+                "event_p": "1/2",
+                "event_q": "0",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "-1/2",
+                    "p": "0",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  },
+                  {
+                    "excess": "1/2",
+                    "p": "1/2",
+                    "positive_part": "1/2",
+                    "q": "0"
+                  },
+                  {
+                    "excess": "0",
+                    "p": "1/2",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [
+                  2
+                ],
+                "to_index": 0
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "1/2",
+          "within_point_audit_domain": true
+        }
+      ]
+    },
+    {
+      "name": "neighbor envelope switches",
+      "profile": {
+        "channel": {
+          "neighbors": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "outputs": [
+            "y0",
+            "y1",
+            "y2",
+            "y3"
+          ],
+          "probabilities": [
+            [
+              "1/16",
+              "5/16",
+              "1/8",
+              "1/2"
+            ],
+            [
+              "5/16",
+              "3/8",
+              "1/16",
+              "1/4"
+            ],
+            [
+              "1/8",
+              "5/16",
+              "3/16",
+              "3/8"
+            ]
+          ],
+          "schema_version": 1,
+          "secrets": [
+            "s0",
+            "s1",
+            "s2"
+          ]
+        },
+        "domain": "all finite exact multiplicative factors t >= 1, not epsilon",
+        "knots": [
+          {
+            "factor": "1",
+            "point": {
+              "delta": "5/16",
+              "factor": "1",
+              "pairs": [
+                {
+                  "delta": "5/16",
+                  "event_indices": [
+                    2,
+                    3
+                  ],
+                  "event_p": "5/8",
+                  "event_q": "5/16",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "-1/4",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-1/16",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    },
+                    {
+                      "excess": "1/16",
+                      "p": "1/8",
+                      "positive_part": "1/16",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "1/4",
+                      "p": "1/2",
+                      "positive_part": "1/4",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                },
+                {
+                  "delta": "5/16",
+                  "event_indices": [
+                    0,
+                    1
+                  ],
+                  "event_p": "11/16",
+                  "event_q": "3/8",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "1/4",
+                      "p": "5/16",
+                      "positive_part": "1/4",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "1/16",
+                      "p": "3/8",
+                      "positive_part": "1/16",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-1/16",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "1/8"
+                    },
+                    {
+                      "excess": "-1/4",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 0
+                },
+                {
+                  "delta": "1/4",
+                  "event_indices": [
+                    0,
+                    1
+                  ],
+                  "event_p": "11/16",
+                  "event_q": "7/16",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "3/16",
+                      "p": "5/16",
+                      "positive_part": "3/16",
+                      "q": "1/8"
+                    },
+                    {
+                      "excess": "1/16",
+                      "p": "3/8",
+                      "positive_part": "1/16",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-1/8",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "3/16"
+                    },
+                    {
+                      "excess": "-1/8",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 2
+                },
+                {
+                  "delta": "1/4",
+                  "event_indices": [
+                    2,
+                    3
+                  ],
+                  "event_p": "9/16",
+                  "event_q": "5/16",
+                  "from_index": 2,
+                  "terms": [
+                    {
+                      "excess": "-3/16",
+                      "p": "1/8",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-1/16",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    },
+                    {
+                      "excess": "1/8",
+                      "p": "3/16",
+                      "positive_part": "1/8",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "1/8",
+                      "p": "3/8",
+                      "positive_part": "1/8",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "factor": "5/4",
+            "point": {
+              "delta": "15/64",
+              "factor": "5/4",
+              "pairs": [
+                {
+                  "delta": "15/64",
+                  "event_indices": [
+                    2,
+                    3
+                  ],
+                  "event_p": "5/8",
+                  "event_q": "5/16",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "-21/64",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-5/32",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    },
+                    {
+                      "excess": "3/64",
+                      "p": "1/8",
+                      "positive_part": "3/64",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "3/16",
+                      "p": "1/2",
+                      "positive_part": "3/16",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                },
+                {
+                  "delta": "15/64",
+                  "event_indices": [
+                    0
+                  ],
+                  "event_p": "5/16",
+                  "event_q": "1/16",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "15/64",
+                      "p": "5/16",
+                      "positive_part": "15/64",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "-1/64",
+                      "p": "3/8",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-3/32",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "1/8"
+                    },
+                    {
+                      "excess": "-3/8",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 0
+                },
+                {
+                  "delta": "5/32",
+                  "event_indices": [
+                    0
+                  ],
+                  "event_p": "5/16",
+                  "event_q": "1/8",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "5/32",
+                      "p": "5/16",
+                      "positive_part": "5/32",
+                      "q": "1/8"
+                    },
+                    {
+                      "excess": "-1/64",
+                      "p": "3/8",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-11/64",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "3/16"
+                    },
+                    {
+                      "excess": "-7/32",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 2
+                },
+                {
+                  "delta": "11/64",
+                  "event_indices": [
+                    2,
+                    3
+                  ],
+                  "event_p": "9/16",
+                  "event_q": "5/16",
+                  "from_index": 2,
+                  "terms": [
+                    {
+                      "excess": "-17/64",
+                      "p": "1/8",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-5/32",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    },
+                    {
+                      "excess": "7/64",
+                      "p": "3/16",
+                      "positive_part": "7/64",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "1/16",
+                      "p": "3/8",
+                      "positive_part": "1/16",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "factor": "5",
+            "point": {
+              "delta": "0",
+              "factor": "5",
+              "pairs": [
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "-3/2",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-25/16",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    },
+                    {
+                      "excess": "-3/16",
+                      "p": "1/8",
+                      "positive_part": "0",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "-3/4",
+                      "p": "1/2",
+                      "positive_part": "0",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                },
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "0",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "-19/16",
+                      "p": "3/8",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-9/16",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "1/8"
+                    },
+                    {
+                      "excess": "-9/4",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    }
+                  ],
+                  "ties": [
+                    0
+                  ],
+                  "to_index": 0
+                },
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "-5/16",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "1/8"
+                    },
+                    {
+                      "excess": "-19/16",
+                      "p": "3/8",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-7/8",
+                      "p": "1/16",
+                      "positive_part": "0",
+                      "q": "3/16"
+                    },
+                    {
+                      "excess": "-13/8",
+                      "p": "1/4",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 2
+                },
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 2,
+                  "terms": [
+                    {
+                      "excess": "-23/16",
+                      "p": "1/8",
+                      "positive_part": "0",
+                      "q": "5/16"
+                    },
+                    {
+                      "excess": "-25/16",
+                      "p": "5/16",
+                      "positive_part": "0",
+                      "q": "3/8"
+                    },
+                    {
+                      "excess": "-1/8",
+                      "p": "3/16",
+                      "positive_part": "0",
+                      "q": "1/16"
+                    },
+                    {
+                      "excess": "-7/8",
+                      "p": "3/8",
+                      "positive_part": "0",
+                      "q": "1/4"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        ],
+        "pair_curves": [
+          {
+            "from_index": 0,
+            "ratio_knots": [
+              "2"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  2,
+                  3
+                ],
+                "intercept": "5/8",
+                "lower": "1",
+                "slope_magnitude": "5/16",
+                "upper": "2"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "2",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 1
+          },
+          {
+            "from_index": 1,
+            "ratio_knots": [
+              "6/5",
+              "5"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  0,
+                  1
+                ],
+                "intercept": "11/16",
+                "lower": "1",
+                "slope_magnitude": "3/8",
+                "upper": "6/5"
+              },
+              {
+                "active_outputs": [
+                  0
+                ],
+                "intercept": "5/16",
+                "lower": "6/5",
+                "slope_magnitude": "1/16",
+                "upper": "5"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "5",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 0
+          },
+          {
+            "from_index": 1,
+            "ratio_knots": [
+              "6/5",
+              "5/2"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  0,
+                  1
+                ],
+                "intercept": "11/16",
+                "lower": "1",
+                "slope_magnitude": "7/16",
+                "upper": "6/5"
+              },
+              {
+                "active_outputs": [
+                  0
+                ],
+                "intercept": "5/16",
+                "lower": "6/5",
+                "slope_magnitude": "1/8",
+                "upper": "5/2"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "5/2",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 2
+          },
+          {
+            "from_index": 2,
+            "ratio_knots": [
+              "3/2",
+              "3"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  2,
+                  3
+                ],
+                "intercept": "9/16",
+                "lower": "1",
+                "slope_magnitude": "5/16",
+                "upper": "3/2"
+              },
+              {
+                "active_outputs": [
+                  2
+                ],
+                "intercept": "3/16",
+                "lower": "3/2",
+                "slope_magnitude": "1/16",
+                "upper": "3"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "3",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 1
+          }
+        ],
+        "plateau": "0",
+        "plateau_pairs": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "pure_factor": "5",
+        "ratio_grid": [
+          "1",
+          "6/5",
+          "3/2",
+          "2",
+          "5/2",
+          "3",
+          "5"
+        ],
+        "schema_version": 1,
+        "scope": "complete profile of supplied finite table and listed neighbor edges only; frontier input limited to 4 secrets / 8 outputs",
+        "segments": [
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "0",
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "5/4"
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "1/80",
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "6/5"
+                  },
+                  {
+                    "end_slack": "0",
+                    "lower": "6/5",
+                    "start_slack": "1/80",
+                    "tail_slope_slack": null,
+                    "upper": "5/4"
+                  }
+                ],
+                "pair_index": 1
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "7/80",
+                    "lower": "1",
+                    "start_slack": "1/16",
+                    "tail_slope_slack": null,
+                    "upper": "6/5"
+                  },
+                  {
+                    "end_slack": "5/64",
+                    "lower": "6/5",
+                    "start_slack": "7/80",
+                    "tail_slope_slack": null,
+                    "upper": "5/4"
+                  }
+                ],
+                "pair_index": 2
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "1/16",
+                    "lower": "1",
+                    "start_slack": "1/16",
+                    "tail_slope_slack": null,
+                    "upper": "5/4"
+                  }
+                ],
+                "pair_index": 3
+              }
+            ],
+            "intercept": "5/8",
+            "interior_worst_pairs": [
+              0
+            ],
+            "lower": "1",
+            "slope_magnitude": "5/16",
+            "upper": "5/4"
+          },
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "3/16",
+                    "lower": "5/4",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "2"
+                  },
+                  {
+                    "end_slack": "0",
+                    "lower": "2",
+                    "start_slack": "3/16",
+                    "tail_slope_slack": null,
+                    "upper": "5"
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "0",
+                    "lower": "5/4",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "5"
+                  }
+                ],
+                "pair_index": 1
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "5/32",
+                    "lower": "5/4",
+                    "start_slack": "5/64",
+                    "tail_slope_slack": null,
+                    "upper": "5/2"
+                  },
+                  {
+                    "end_slack": "0",
+                    "lower": "5/2",
+                    "start_slack": "5/32",
+                    "tail_slope_slack": null,
+                    "upper": "5"
+                  }
+                ],
+                "pair_index": 2
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "1/8",
+                    "lower": "5/4",
+                    "start_slack": "1/16",
+                    "tail_slope_slack": null,
+                    "upper": "3/2"
+                  },
+                  {
+                    "end_slack": "1/8",
+                    "lower": "3/2",
+                    "start_slack": "1/8",
+                    "tail_slope_slack": null,
+                    "upper": "3"
+                  },
+                  {
+                    "end_slack": "0",
+                    "lower": "3",
+                    "start_slack": "1/8",
+                    "tail_slope_slack": null,
+                    "upper": "5"
+                  }
+                ],
+                "pair_index": 3
+              }
+            ],
+            "intercept": "5/16",
+            "interior_worst_pairs": [
+              1
+            ],
+            "lower": "5/4",
+            "slope_magnitude": "1/16",
+            "upper": "5"
+          },
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "5",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "5",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 1
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "5",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 2
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "5",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 3
+              }
+            ],
+            "intercept": "0",
+            "interior_worst_pairs": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "lower": "5",
+            "slope_magnitude": "0",
+            "upper": null
+          }
+        ],
+        "unlisted_secret_pairs": [
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "queries": [
+        {
+          "factor": "5",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "intercept": "5/16",
+            "interval_lower": "5/4",
+            "interval_upper": "5",
+            "kind": "positive_left_slope",
+            "root": "5",
+            "slope_magnitude": "1/16",
+            "supporting_pair_indices": [
+              1
+            ]
+          },
+          "point": {
+            "delta": "0",
+            "factor": "5",
+            "pairs": [
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "-3/2",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-25/16",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "-3/16",
+                    "p": "1/8",
+                    "positive_part": "0",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "-3/4",
+                    "p": "1/2",
+                    "positive_part": "0",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              },
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "0",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "-19/16",
+                    "p": "3/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-9/16",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "-9/4",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [
+                  0
+                ],
+                "to_index": 0
+              },
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "-5/16",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "-19/16",
+                    "p": "3/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-7/8",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "3/16"
+                  },
+                  {
+                    "excess": "-13/8",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  }
+                ],
+                "ties": [],
+                "to_index": 2
+              },
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 2,
+                "terms": [
+                  {
+                    "excess": "-23/16",
+                    "p": "1/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-25/16",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "-1/8",
+                    "p": "3/16",
+                    "positive_part": "0",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "-7/8",
+                    "p": "3/8",
+                    "positive_part": "0",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "0",
+          "within_point_audit_domain": true
+        },
+        {
+          "factor": "5/4",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "intercept": "5/8",
+            "interval_lower": "1",
+            "interval_upper": "5/4",
+            "kind": "positive_left_slope",
+            "root": "5/4",
+            "slope_magnitude": "5/16",
+            "supporting_pair_indices": [
+              0
+            ]
+          },
+          "point": {
+            "delta": "15/64",
+            "factor": "5/4",
+            "pairs": [
+              {
+                "delta": "15/64",
+                "event_indices": [
+                  2,
+                  3
+                ],
+                "event_p": "5/8",
+                "event_q": "5/16",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "-21/64",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-5/32",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "3/64",
+                    "p": "1/8",
+                    "positive_part": "3/64",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "3/16",
+                    "p": "1/2",
+                    "positive_part": "3/16",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              },
+              {
+                "delta": "15/64",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "5/16",
+                "event_q": "1/16",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "15/64",
+                    "p": "5/16",
+                    "positive_part": "15/64",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "-1/64",
+                    "p": "3/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-3/32",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "-3/8",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [],
+                "to_index": 0
+              },
+              {
+                "delta": "5/32",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "5/16",
+                "event_q": "1/8",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "5/32",
+                    "p": "5/16",
+                    "positive_part": "5/32",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "-1/64",
+                    "p": "3/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-11/64",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "3/16"
+                  },
+                  {
+                    "excess": "-7/32",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  }
+                ],
+                "ties": [],
+                "to_index": 2
+              },
+              {
+                "delta": "11/64",
+                "event_indices": [
+                  2,
+                  3
+                ],
+                "event_p": "9/16",
+                "event_q": "5/16",
+                "from_index": 2,
+                "terms": [
+                  {
+                    "excess": "-17/64",
+                    "p": "1/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-5/32",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "7/64",
+                    "p": "3/16",
+                    "positive_part": "7/64",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "1/16",
+                    "p": "3/8",
+                    "positive_part": "1/16",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "15/64",
+          "within_point_audit_domain": true
+        },
+        {
+          "factor": "6/5",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "intercept": "5/8",
+            "interval_lower": "1",
+            "interval_upper": "5/4",
+            "kind": "positive_left_slope",
+            "root": "6/5",
+            "slope_magnitude": "5/16",
+            "supporting_pair_indices": [
+              0
+            ]
+          },
+          "point": {
+            "delta": "1/4",
+            "factor": "6/5",
+            "pairs": [
+              {
+                "delta": "1/4",
+                "event_indices": [
+                  2,
+                  3
+                ],
+                "event_p": "5/8",
+                "event_q": "5/16",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "-5/16",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-11/80",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "1/20",
+                    "p": "1/8",
+                    "positive_part": "1/20",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "1/5",
+                    "p": "1/2",
+                    "positive_part": "1/5",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              },
+              {
+                "delta": "19/80",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "5/16",
+                "event_q": "1/16",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "19/80",
+                    "p": "5/16",
+                    "positive_part": "19/80",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "0",
+                    "p": "3/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-7/80",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "-7/20",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [
+                  1
+                ],
+                "to_index": 0
+              },
+              {
+                "delta": "13/80",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "5/16",
+                "event_q": "1/8",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "13/80",
+                    "p": "5/16",
+                    "positive_part": "13/80",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "0",
+                    "p": "3/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-13/80",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "3/16"
+                  },
+                  {
+                    "excess": "-1/5",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  }
+                ],
+                "ties": [
+                  1
+                ],
+                "to_index": 2
+              },
+              {
+                "delta": "3/16",
+                "event_indices": [
+                  2,
+                  3
+                ],
+                "event_p": "9/16",
+                "event_q": "5/16",
+                "from_index": 2,
+                "terms": [
+                  {
+                    "excess": "-1/4",
+                    "p": "1/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-11/80",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "9/80",
+                    "p": "3/16",
+                    "positive_part": "9/80",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "3/40",
+                    "p": "3/8",
+                    "positive_part": "3/40",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              }
+            ],
+            "worst_pairs": [
+              0
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "1/4",
+          "within_point_audit_domain": true
+        },
+        {
+          "factor": "1",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "kind": "domain_lower_bound",
+            "lower_factor": "1"
+          },
+          "point": {
+            "delta": "5/16",
+            "factor": "1",
+            "pairs": [
+              {
+                "delta": "5/16",
+                "event_indices": [
+                  2,
+                  3
+                ],
+                "event_p": "5/8",
+                "event_q": "5/16",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "-1/4",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-1/16",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "1/16",
+                    "p": "1/8",
+                    "positive_part": "1/16",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "1/4",
+                    "p": "1/2",
+                    "positive_part": "1/4",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              },
+              {
+                "delta": "5/16",
+                "event_indices": [
+                  0,
+                  1
+                ],
+                "event_p": "11/16",
+                "event_q": "3/8",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "1/4",
+                    "p": "5/16",
+                    "positive_part": "1/4",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "1/16",
+                    "p": "3/8",
+                    "positive_part": "1/16",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-1/16",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "-1/4",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [],
+                "to_index": 0
+              },
+              {
+                "delta": "1/4",
+                "event_indices": [
+                  0,
+                  1
+                ],
+                "event_p": "11/16",
+                "event_q": "7/16",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "3/16",
+                    "p": "5/16",
+                    "positive_part": "3/16",
+                    "q": "1/8"
+                  },
+                  {
+                    "excess": "1/16",
+                    "p": "3/8",
+                    "positive_part": "1/16",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-1/8",
+                    "p": "1/16",
+                    "positive_part": "0",
+                    "q": "3/16"
+                  },
+                  {
+                    "excess": "-1/8",
+                    "p": "1/4",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  }
+                ],
+                "ties": [],
+                "to_index": 2
+              },
+              {
+                "delta": "1/4",
+                "event_indices": [
+                  2,
+                  3
+                ],
+                "event_p": "9/16",
+                "event_q": "5/16",
+                "from_index": 2,
+                "terms": [
+                  {
+                    "excess": "-3/16",
+                    "p": "1/8",
+                    "positive_part": "0",
+                    "q": "5/16"
+                  },
+                  {
+                    "excess": "-1/16",
+                    "p": "5/16",
+                    "positive_part": "0",
+                    "q": "3/8"
+                  },
+                  {
+                    "excess": "1/8",
+                    "p": "3/16",
+                    "positive_part": "1/8",
+                    "q": "1/16"
+                  },
+                  {
+                    "excess": "1/8",
+                    "p": "3/8",
+                    "positive_part": "1/8",
+                    "q": "1/4"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "1/2",
+          "within_point_audit_domain": true
+        }
+      ]
+    },
+    {
+      "name": "large exact factor",
+      "profile": {
+        "channel": {
+          "neighbors": [
+            [
+              0,
+              1
+            ]
+          ],
+          "outputs": [
+            "y0",
+            "y1"
+          ],
+          "probabilities": [
+            [
+              "1/2",
+              "1/2"
+            ],
+            [
+              "1/1000000000000000000000000000000",
+              "999999999999999999999999999999/1000000000000000000000000000000"
+            ]
+          ],
+          "schema_version": 1,
+          "secrets": [
+            "s0",
+            "s1"
+          ]
+        },
+        "domain": "all finite exact multiplicative factors t >= 1, not epsilon",
+        "knots": [
+          {
+            "factor": "1",
+            "point": {
+              "delta": "499999999999999999999999999999/1000000000000000000000000000000",
+              "factor": "1",
+              "pairs": [
+                {
+                  "delta": "499999999999999999999999999999/1000000000000000000000000000000",
+                  "event_indices": [
+                    0
+                  ],
+                  "event_p": "1/2",
+                  "event_q": "1/1000000000000000000000000000000",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "499999999999999999999999999999/1000000000000000000000000000000",
+                      "p": "1/2",
+                      "positive_part": "499999999999999999999999999999/1000000000000000000000000000000",
+                      "q": "1/1000000000000000000000000000000"
+                    },
+                    {
+                      "excess": "-499999999999999999999999999999/1000000000000000000000000000000",
+                      "p": "1/2",
+                      "positive_part": "0",
+                      "q": "999999999999999999999999999999/1000000000000000000000000000000"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 1
+                },
+                {
+                  "delta": "499999999999999999999999999999/1000000000000000000000000000000",
+                  "event_indices": [
+                    1
+                  ],
+                  "event_p": "999999999999999999999999999999/1000000000000000000000000000000",
+                  "event_q": "1/2",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "-499999999999999999999999999999/1000000000000000000000000000000",
+                      "p": "1/1000000000000000000000000000000",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    },
+                    {
+                      "excess": "499999999999999999999999999999/1000000000000000000000000000000",
+                      "p": "999999999999999999999999999999/1000000000000000000000000000000",
+                      "positive_part": "499999999999999999999999999999/1000000000000000000000000000000",
+                      "q": "1/2"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 0
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "factor": "500000000000000000000000000000",
+            "point": {
+              "delta": "0",
+              "factor": "500000000000000000000000000000",
+              "pairs": [
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 0,
+                  "terms": [
+                    {
+                      "excess": "0",
+                      "p": "1/2",
+                      "positive_part": "0",
+                      "q": "1/1000000000000000000000000000000"
+                    },
+                    {
+                      "excess": "-499999999999999999999999999999",
+                      "p": "1/2",
+                      "positive_part": "0",
+                      "q": "999999999999999999999999999999/1000000000000000000000000000000"
+                    }
+                  ],
+                  "ties": [
+                    0
+                  ],
+                  "to_index": 1
+                },
+                {
+                  "delta": "0",
+                  "event_indices": [],
+                  "event_p": "0",
+                  "event_q": "0",
+                  "from_index": 1,
+                  "terms": [
+                    {
+                      "excess": "-249999999999999999999999999999999999999999999999999999999999/1000000000000000000000000000000",
+                      "p": "1/1000000000000000000000000000000",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    },
+                    {
+                      "excess": "-249999999999999999999999999999000000000000000000000000000001/1000000000000000000000000000000",
+                      "p": "999999999999999999999999999999/1000000000000000000000000000000",
+                      "positive_part": "0",
+                      "q": "1/2"
+                    }
+                  ],
+                  "ties": [],
+                  "to_index": 0
+                }
+              ],
+              "worst_pairs": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "pair_curves": [
+          {
+            "from_index": 0,
+            "ratio_knots": [
+              "500000000000000000000000000000"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  0
+                ],
+                "intercept": "1/2",
+                "lower": "1",
+                "slope_magnitude": "1/1000000000000000000000000000000",
+                "upper": "500000000000000000000000000000"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "500000000000000000000000000000",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 1
+          },
+          {
+            "from_index": 1,
+            "ratio_knots": [
+              "999999999999999999999999999999/500000000000000000000000000000"
+            ],
+            "segments": [
+              {
+                "active_outputs": [
+                  1
+                ],
+                "intercept": "999999999999999999999999999999/1000000000000000000000000000000",
+                "lower": "1",
+                "slope_magnitude": "1/2",
+                "upper": "999999999999999999999999999999/500000000000000000000000000000"
+              },
+              {
+                "active_outputs": [],
+                "intercept": "0",
+                "lower": "999999999999999999999999999999/500000000000000000000000000000",
+                "slope_magnitude": "0",
+                "upper": null
+              }
+            ],
+            "singular_mass": "0",
+            "to_index": 0
+          }
+        ],
+        "plateau": "0",
+        "plateau_pairs": [
+          0,
+          1
+        ],
+        "pure_factor": "500000000000000000000000000000",
+        "ratio_grid": [
+          "1",
+          "999999999999999999999999999999/500000000000000000000000000000",
+          "500000000000000000000000000000"
+        ],
+        "schema_version": 1,
+        "scope": "complete profile of supplied finite table and listed neighbor edges only; frontier input limited to 4 secrets / 8 outputs",
+        "segments": [
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "0",
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "500000000000000000000000000000"
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": "249999999999999999999999999999000000000000000000000000000001/500000000000000000000000000000000000000000000000000000000000",
+                    "lower": "1",
+                    "start_slack": "0",
+                    "tail_slope_slack": null,
+                    "upper": "999999999999999999999999999999/500000000000000000000000000000"
+                  },
+                  {
+                    "end_slack": "0",
+                    "lower": "999999999999999999999999999999/500000000000000000000000000000",
+                    "start_slack": "249999999999999999999999999999000000000000000000000000000001/500000000000000000000000000000000000000000000000000000000000",
+                    "tail_slope_slack": null,
+                    "upper": "500000000000000000000000000000"
+                  }
+                ],
+                "pair_index": 1
+              }
+            ],
+            "intercept": "1/2",
+            "interior_worst_pairs": [
+              0
+            ],
+            "lower": "1",
+            "slope_magnitude": "1/1000000000000000000000000000000",
+            "upper": "500000000000000000000000000000"
+          },
+          {
+            "dominance": [
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "500000000000000000000000000000",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 0
+              },
+              {
+                "overlaps": [
+                  {
+                    "end_slack": null,
+                    "lower": "500000000000000000000000000000",
+                    "start_slack": "0",
+                    "tail_slope_slack": "0",
+                    "upper": null
+                  }
+                ],
+                "pair_index": 1
+              }
+            ],
+            "intercept": "0",
+            "interior_worst_pairs": [
+              0,
+              1
+            ],
+            "lower": "500000000000000000000000000000",
+            "slope_magnitude": "0",
+            "upper": null
+          }
+        ],
+        "unlisted_secret_pairs": []
+      },
+      "queries": [
+        {
+          "factor": "500000000000000000000000000000",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "intercept": "1/2",
+            "interval_lower": "1",
+            "interval_upper": "500000000000000000000000000000",
+            "kind": "positive_left_slope",
+            "root": "500000000000000000000000000000",
+            "slope_magnitude": "1/1000000000000000000000000000000",
+            "supporting_pair_indices": [
+              0
+            ]
+          },
+          "point": {
+            "delta": "0",
+            "factor": "500000000000000000000000000000",
+            "pairs": [
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "0",
+                    "p": "1/2",
+                    "positive_part": "0",
+                    "q": "1/1000000000000000000000000000000"
+                  },
+                  {
+                    "excess": "-499999999999999999999999999999",
+                    "p": "1/2",
+                    "positive_part": "0",
+                    "q": "999999999999999999999999999999/1000000000000000000000000000000"
+                  }
+                ],
+                "ties": [
+                  0
+                ],
+                "to_index": 1
+              },
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "-249999999999999999999999999999999999999999999999999999999999/1000000000000000000000000000000",
+                    "p": "1/1000000000000000000000000000000",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  },
+                  {
+                    "excess": "-249999999999999999999999999999000000000000000000000000000001/1000000000000000000000000000000",
+                    "p": "999999999999999999999999999999/1000000000000000000000000000000",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [],
+                "to_index": 0
+              }
+            ],
+            "worst_pairs": [
+              0,
+              1
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "0",
+          "within_point_audit_domain": false
+        },
+        {
+          "factor": "250000000000000000000000000000",
+          "factor_note": "exact mathematical factor; the original audit() keeps its separate 10^12 factor cap and 512-bit factor component limit",
+          "minimality": {
+            "intercept": "1/2",
+            "interval_lower": "1",
+            "interval_upper": "500000000000000000000000000000",
+            "kind": "positive_left_slope",
+            "root": "250000000000000000000000000000",
+            "slope_magnitude": "1/1000000000000000000000000000000",
+            "supporting_pair_indices": [
+              0
+            ]
+          },
+          "point": {
+            "delta": "1/4",
+            "factor": "250000000000000000000000000000",
+            "pairs": [
+              {
+                "delta": "1/4",
+                "event_indices": [
+                  0
+                ],
+                "event_p": "1/2",
+                "event_q": "1/1000000000000000000000000000000",
+                "from_index": 0,
+                "terms": [
+                  {
+                    "excess": "1/4",
+                    "p": "1/2",
+                    "positive_part": "1/4",
+                    "q": "1/1000000000000000000000000000000"
+                  },
+                  {
+                    "excess": "-999999999999999999999999999997/4",
+                    "p": "1/2",
+                    "positive_part": "0",
+                    "q": "999999999999999999999999999999/1000000000000000000000000000000"
+                  }
+                ],
+                "ties": [],
+                "to_index": 1
+              },
+              {
+                "delta": "0",
+                "event_indices": [],
+                "event_p": "0",
+                "event_q": "0",
+                "from_index": 1,
+                "terms": [
+                  {
+                    "excess": "-124999999999999999999999999999999999999999999999999999999999/1000000000000000000000000000000",
+                    "p": "1/1000000000000000000000000000000",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  },
+                  {
+                    "excess": "-124999999999999999999999999999000000000000000000000000000001/1000000000000000000000000000000",
+                    "p": "999999999999999999999999999999/1000000000000000000000000000000",
+                    "positive_part": "0",
+                    "q": "1/2"
+                  }
+                ],
+                "ties": [],
+                "to_index": 0
+              }
+            ],
+            "worst_pairs": [
+              0
+            ]
+          },
+          "status": "minimum_attained",
+          "target_delta": "1/4",
+          "within_point_audit_domain": false
+        }
+      ]
+    }
+  ],
+  "description": "Exact developed finite-channel frontiers and inverse delta budgets",
+  "schema_version": 1
+}
