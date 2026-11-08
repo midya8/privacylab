@@ -1,0 +1,3386 @@
+{
+  "controls": [
+    {
+      "audits": [
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "1/2",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "1",
+          "pairs": [
+            {
+              "delta": "1/2",
+              "event_indices": [
+                0
+              ],
+              "event_outputs": [
+                "0"
+              ],
+              "event_p": "3/4",
+              "event_q": "1/4",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "1/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "1/2",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-1/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "1/2",
+              "event_indices": [
+                1
+              ],
+              "event_outputs": [
+                "1"
+              ],
+              "event_p": "3/4",
+              "event_q": "1/4",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-1/2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/2",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "1/2",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "3",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0
+              ],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                1
+              ],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "9",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-3/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-13/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-13/2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/2",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "randomized_response"
+    },
+    {
+      "audits": [
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "pair/0/0",
+              "pair/0/1",
+              "pair/1/0",
+              "pair/1/1"
+            ],
+            "probabilities": [
+              [
+                "9/16",
+                "3/16",
+                "3/16",
+                "1/16"
+              ],
+              [
+                "1/16",
+                "3/16",
+                "3/16",
+                "9/16"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "1/2",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "1",
+          "pairs": [
+            {
+              "delta": "1/2",
+              "event_indices": [
+                0
+              ],
+              "event_outputs": [
+                "pair/0/0"
+              ],
+              "event_p": "9/16",
+              "event_q": "1/16",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "9",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "1/2",
+                  "output_index": 0,
+                  "p": "9/16",
+                  "positive_part": "1/2",
+                  "q": "1/16",
+                  "ratio": "9",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 2,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-1/2",
+                  "output_index": 3,
+                  "p": "1/16",
+                  "positive_part": "0",
+                  "q": "9/16",
+                  "ratio": "1/9",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                1,
+                2
+              ],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "1/2",
+              "event_indices": [
+                3
+              ],
+              "event_outputs": [
+                "pair/1/1"
+              ],
+              "event_p": "9/16",
+              "event_q": "1/16",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "9",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-1/2",
+                  "output_index": 0,
+                  "p": "1/16",
+                  "positive_part": "0",
+                  "q": "9/16",
+                  "ratio": "1/9",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 2,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/2",
+                  "output_index": 3,
+                  "p": "9/16",
+                  "positive_part": "1/2",
+                  "q": "1/16",
+                  "ratio": "9",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                1,
+                2
+              ],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "9",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "9",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 3,
+              "ratio": "9",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "pair/0/0",
+              "pair/0/1",
+              "pair/1/0",
+              "pair/1/1"
+            ],
+            "probabilities": [
+              [
+                "9/16",
+                "3/16",
+                "3/16",
+                "1/16"
+              ],
+              [
+                "1/16",
+                "3/16",
+                "3/16",
+                "9/16"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "3/8",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "3",
+          "pairs": [
+            {
+              "delta": "3/8",
+              "event_indices": [
+                0
+              ],
+              "event_outputs": [
+                "pair/0/0"
+              ],
+              "event_p": "9/16",
+              "event_q": "1/16",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "9",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "3/8",
+                  "output_index": 0,
+                  "p": "9/16",
+                  "positive_part": "3/8",
+                  "q": "1/16",
+                  "ratio": "9",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/8",
+                  "output_index": 1,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/8",
+                  "output_index": 2,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-13/8",
+                  "output_index": 3,
+                  "p": "1/16",
+                  "positive_part": "0",
+                  "q": "9/16",
+                  "ratio": "1/9",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "3/8",
+              "event_indices": [
+                3
+              ],
+              "event_outputs": [
+                "pair/1/1"
+              ],
+              "event_p": "9/16",
+              "event_q": "1/16",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "9",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-13/8",
+                  "output_index": 0,
+                  "p": "1/16",
+                  "positive_part": "0",
+                  "q": "9/16",
+                  "ratio": "1/9",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/8",
+                  "output_index": 1,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/8",
+                  "output_index": 2,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "3/8",
+                  "output_index": 3,
+                  "p": "9/16",
+                  "positive_part": "3/8",
+                  "q": "1/16",
+                  "ratio": "9",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "9",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "9",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 3,
+              "ratio": "9",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "pair/0/0",
+              "pair/0/1",
+              "pair/1/0",
+              "pair/1/1"
+            ],
+            "probabilities": [
+              [
+                "9/16",
+                "3/16",
+                "3/16",
+                "1/16"
+              ],
+              [
+                "1/16",
+                "3/16",
+                "3/16",
+                "9/16"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "9",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "9",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "9/16",
+                  "positive_part": "0",
+                  "q": "1/16",
+                  "ratio": "9",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/2",
+                  "output_index": 1,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/2",
+                  "output_index": 2,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-5",
+                  "output_index": 3,
+                  "p": "1/16",
+                  "positive_part": "0",
+                  "q": "9/16",
+                  "ratio": "1/9",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0
+              ],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "9",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-5",
+                  "output_index": 0,
+                  "p": "1/16",
+                  "positive_part": "0",
+                  "q": "9/16",
+                  "ratio": "1/9",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/2",
+                  "output_index": 1,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/2",
+                  "output_index": 2,
+                  "p": "3/16",
+                  "positive_part": "0",
+                  "q": "3/16",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 3,
+                  "p": "9/16",
+                  "positive_part": "0",
+                  "q": "1/16",
+                  "ratio": "9",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                3
+              ],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "9",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "9",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 3,
+              "ratio": "9",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "two_independent_releases"
+    },
+    {
+      "audits": [
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "1/2",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "1",
+          "pairs": [
+            {
+              "delta": "1/2",
+              "event_indices": [
+                0
+              ],
+              "event_outputs": [
+                "0"
+              ],
+              "event_p": "3/4",
+              "event_q": "1/4",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "1/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "1/2",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-1/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "1/2",
+              "event_indices": [
+                1
+              ],
+              "event_outputs": [
+                "1"
+              ],
+              "event_p": "3/4",
+              "event_q": "1/4",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-1/2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/2",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "1/2",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "3",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0
+              ],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                1
+              ],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "9",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-3/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-13/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-13/2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/2",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "vote_with_fresh_tiebreak"
+    },
+    {
+      "audits": [
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "even",
+              "odd"
+            ],
+            "probabilities": [
+              [
+                "5/8",
+                "3/8"
+              ],
+              [
+                "5/8",
+                "3/8"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "1",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "5/8",
+                  "positive_part": "0",
+                  "q": "5/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "3/8",
+                  "positive_part": "0",
+                  "q": "3/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0,
+                1
+              ],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "5/8",
+                  "positive_part": "0",
+                  "q": "5/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "3/8",
+                  "positive_part": "0",
+                  "q": "3/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0,
+                1
+              ],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "1",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 0,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 0
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "even",
+              "odd"
+            ],
+            "probabilities": [
+              [
+                "5/8",
+                "3/8"
+              ],
+              [
+                "5/8",
+                "3/8"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "3",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-5/4",
+                  "output_index": 0,
+                  "p": "5/8",
+                  "positive_part": "0",
+                  "q": "5/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/4",
+                  "output_index": 1,
+                  "p": "3/8",
+                  "positive_part": "0",
+                  "q": "3/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-5/4",
+                  "output_index": 0,
+                  "p": "5/8",
+                  "positive_part": "0",
+                  "q": "5/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/4",
+                  "output_index": 1,
+                  "p": "3/8",
+                  "positive_part": "0",
+                  "q": "3/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "1",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 0,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 0
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "even",
+              "odd"
+            ],
+            "probabilities": [
+              [
+                "5/8",
+                "3/8"
+              ],
+              [
+                "5/8",
+                "3/8"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "9",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-5",
+                  "output_index": 0,
+                  "p": "5/8",
+                  "positive_part": "0",
+                  "q": "5/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3",
+                  "output_index": 1,
+                  "p": "3/8",
+                  "positive_part": "0",
+                  "q": "3/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-5",
+                  "output_index": 0,
+                  "p": "5/8",
+                  "positive_part": "0",
+                  "q": "5/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3",
+                  "output_index": 1,
+                  "p": "3/8",
+                  "positive_part": "0",
+                  "q": "3/8",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "1",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 0,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 0
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "parity_only"
+    },
+    {
+      "audits": [
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "1/2",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "1",
+          "pairs": [
+            {
+              "delta": "1/2",
+              "event_indices": [
+                0
+              ],
+              "event_outputs": [
+                "0"
+              ],
+              "event_p": "3/4",
+              "event_q": "1/4",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "1/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "1/2",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-1/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "1/2",
+              "event_indices": [
+                1
+              ],
+              "event_outputs": [
+                "1"
+              ],
+              "event_p": "3/4",
+              "event_q": "1/4",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-1/2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/2",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "1/2",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "3",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0
+              ],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                1
+              ],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "1/4",
+                "3/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "9",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-3/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-13/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "3",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-13/2",
+                  "output_index": 0,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1/3",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/2",
+                  "output_index": 1,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "3",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "3",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "3",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "3",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "shared_coin_first_marginal"
+    },
+    {
+      "audits": [
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "3/4",
+                "1/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "1",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0,
+                1
+              ],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "0",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "0",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [
+                0,
+                1
+              ],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "1",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 0,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 0
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "3/4",
+                "1/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "3",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-3/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-1/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-3/2",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-1/2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "1",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 0,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 0
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "0",
+              "1"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "1/4"
+              ],
+              [
+                "3/4",
+                "1/4"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "0",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "9",
+          "pairs": [
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-6",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "0",
+              "event_indices": [],
+              "event_outputs": [],
+              "event_p": "0",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": "1",
+              "singular_mass": "0",
+              "terms": [
+                {
+                  "excess": "-6",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-2",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "1",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": "1",
+          "pure_factor_status": "finite",
+          "pure_witnesses": [
+            {
+              "from_index": 0,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 0,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 1
+            },
+            {
+              "from_index": 1,
+              "output_index": 0,
+              "ratio": "1",
+              "to_index": 0
+            },
+            {
+              "from_index": 1,
+              "output_index": 1,
+              "ratio": "1",
+              "to_index": 0
+            }
+          ],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "shared_coin_second_marginal"
+    },
+    {
+      "audits": [
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "00",
+              "01",
+              "10",
+              "11"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "0",
+                "0",
+                "1/4"
+              ],
+              [
+                "0",
+                "1/4",
+                "3/4",
+                "0"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "1",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "1",
+          "pairs": [
+            {
+              "delta": "1",
+              "event_indices": [
+                0,
+                3
+              ],
+              "event_outputs": [
+                "00",
+                "11"
+              ],
+              "event_p": "1",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": null,
+              "singular_mass": "1",
+              "terms": [
+                {
+                  "excess": "3/4",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "3/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "-1/4",
+                  "output_index": 1,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-3/4",
+                  "output_index": 2,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/4",
+                  "output_index": 3,
+                  "p": "1/4",
+                  "positive_part": "1/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "1",
+              "event_indices": [
+                1,
+                2
+              ],
+              "event_outputs": [
+                "01",
+                "10"
+              ],
+              "event_p": "1",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": null,
+              "singular_mass": "1",
+              "terms": [
+                {
+                  "excess": "-3/4",
+                  "output_index": 0,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/4",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "1/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "3/4",
+                  "output_index": 2,
+                  "p": "3/4",
+                  "positive_part": "3/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "-1/4",
+                  "output_index": 3,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": null,
+          "pure_factor_status": "infinite_due_to_support_mismatch",
+          "pure_witnesses": [],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "00",
+              "01",
+              "10",
+              "11"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "0",
+                "0",
+                "1/4"
+              ],
+              [
+                "0",
+                "1/4",
+                "3/4",
+                "0"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "1",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "3",
+          "pairs": [
+            {
+              "delta": "1",
+              "event_indices": [
+                0,
+                3
+              ],
+              "event_outputs": [
+                "00",
+                "11"
+              ],
+              "event_p": "1",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": null,
+              "singular_mass": "1",
+              "terms": [
+                {
+                  "excess": "3/4",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "3/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "-3/4",
+                  "output_index": 1,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-9/4",
+                  "output_index": 2,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/4",
+                  "output_index": 3,
+                  "p": "1/4",
+                  "positive_part": "1/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "1",
+              "event_indices": [
+                1,
+                2
+              ],
+              "event_outputs": [
+                "01",
+                "10"
+              ],
+              "event_p": "1",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": null,
+              "singular_mass": "1",
+              "terms": [
+                {
+                  "excess": "-9/4",
+                  "output_index": 0,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/4",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "1/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "3/4",
+                  "output_index": 2,
+                  "p": "3/4",
+                  "positive_part": "3/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "-3/4",
+                  "output_index": 3,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": null,
+          "pure_factor_status": "infinite_due_to_support_mismatch",
+          "pure_witnesses": [],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        },
+        {
+          "all_secret_pairs_listed": true,
+          "arithmetic": "exact rational supplied channel probabilities",
+          "channel": {
+            "neighbors": [
+              [
+                0,
+                1
+              ]
+            ],
+            "outputs": [
+              "00",
+              "01",
+              "10",
+              "11"
+            ],
+            "probabilities": [
+              [
+                "3/4",
+                "0",
+                "0",
+                "1/4"
+              ],
+              [
+                "0",
+                "1/4",
+                "3/4",
+                "0"
+              ]
+            ],
+            "schema_version": 1,
+            "secrets": [
+              "secret/0",
+              "secret/1"
+            ]
+          },
+          "delta": "1",
+          "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+          "factor": "9",
+          "pairs": [
+            {
+              "delta": "1",
+              "event_indices": [
+                0,
+                3
+              ],
+              "event_outputs": [
+                "00",
+                "11"
+              ],
+              "event_p": "1",
+              "event_q": "0",
+              "from_index": 0,
+              "from_secret": "secret/0",
+              "pure_factor": null,
+              "singular_mass": "1",
+              "terms": [
+                {
+                  "excess": "3/4",
+                  "output_index": 0,
+                  "p": "3/4",
+                  "positive_part": "3/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "-9/4",
+                  "output_index": 1,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "-27/4",
+                  "output_index": 2,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/4",
+                  "output_index": 3,
+                  "p": "1/4",
+                  "positive_part": "1/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 1,
+              "to_secret": "secret/1"
+            },
+            {
+              "delta": "1",
+              "event_indices": [
+                1,
+                2
+              ],
+              "event_outputs": [
+                "01",
+                "10"
+              ],
+              "event_p": "1",
+              "event_q": "0",
+              "from_index": 1,
+              "from_secret": "secret/1",
+              "pure_factor": null,
+              "singular_mass": "1",
+              "terms": [
+                {
+                  "excess": "-27/4",
+                  "output_index": 0,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "3/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                },
+                {
+                  "excess": "1/4",
+                  "output_index": 1,
+                  "p": "1/4",
+                  "positive_part": "1/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "3/4",
+                  "output_index": 2,
+                  "p": "3/4",
+                  "positive_part": "3/4",
+                  "q": "0",
+                  "ratio": null,
+                  "support_case": "singular"
+                },
+                {
+                  "excess": "-9/4",
+                  "output_index": 3,
+                  "p": "0",
+                  "positive_part": "0",
+                  "q": "1/4",
+                  "ratio": "0",
+                  "support_case": "finite"
+                }
+              ],
+              "tie_indices": [],
+              "to_index": 0,
+              "to_secret": "secret/0"
+            }
+          ],
+          "pure_factor": null,
+          "pure_factor_status": "infinite_due_to_support_mismatch",
+          "pure_witnesses": [],
+          "schema_version": 1,
+          "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+          "unlisted_secret_pairs": [],
+          "worst_pairs": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "shared_coin_joint"
+    }
+  ],
+  "postprocessing_kernels": {
+    "parity": {
+      "input_outputs": [
+        "pair/0/0",
+        "pair/0/1",
+        "pair/1/0",
+        "pair/1/1"
+      ],
+      "outputs": [
+        "even",
+        "odd"
+      ],
+      "probabilities": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "schema_version": 1
+    },
+    "shared_first": {
+      "input_outputs": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "outputs": [
+        "0",
+        "1"
+      ],
+      "probabilities": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "schema_version": 1
+    },
+    "shared_second": {
+      "input_outputs": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "outputs": [
+        "0",
+        "1"
+      ],
+      "probabilities": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "schema_version": 1
+    },
+    "vote": {
+      "input_outputs": [
+        "pair/0/0",
+        "pair/0/1",
+        "pair/1/0",
+        "pair/1/1"
+      ],
+      "outputs": [
+        "0",
+        "1"
+      ],
+      "probabilities": [
+        [
+          1,
+          0
+        ],
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "schema_version": 1
+    }
+  },
+  "product_mapping": [
+    {
+      "first_index": 0,
+      "first_label": "0",
+      "output_index": 0,
+      "second_index": 0,
+      "second_label": "0"
+    },
+    {
+      "first_index": 0,
+      "first_label": "0",
+      "output_index": 1,
+      "second_index": 1,
+      "second_label": "1"
+    },
+    {
+      "first_index": 1,
+      "first_label": "1",
+      "output_index": 2,
+      "second_index": 0,
+      "second_label": "0"
+    },
+    {
+      "first_index": 1,
+      "first_label": "1",
+      "output_index": 3,
+      "second_index": 1,
+      "second_label": "1"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "developed finite probability-table controls; no private data or trained-model guarantee",
+  "shared_coin": {
+    "conditional_on_A_zero": {
+      "all_secret_pairs_listed": true,
+      "arithmetic": "exact rational supplied channel probabilities",
+      "channel": {
+        "neighbors": [
+          [
+            0,
+            1
+          ]
+        ],
+        "outputs": [
+          "B/0",
+          "B/1"
+        ],
+        "probabilities": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "schema_version": 1,
+        "secrets": [
+          "secret/0",
+          "secret/1"
+        ]
+      },
+      "delta": "1",
+      "epsilon_relation": "epsilon = natural_log(factor); factor is not epsilon",
+      "factor": "3",
+      "pairs": [
+        {
+          "delta": "1",
+          "event_indices": [
+            0
+          ],
+          "event_outputs": [
+            "B/0"
+          ],
+          "event_p": "1",
+          "event_q": "0",
+          "from_index": 0,
+          "from_secret": "secret/0",
+          "pure_factor": null,
+          "singular_mass": "1",
+          "terms": [
+            {
+              "excess": "1",
+              "output_index": 0,
+              "p": "1",
+              "positive_part": "1",
+              "q": "0",
+              "ratio": null,
+              "support_case": "singular"
+            },
+            {
+              "excess": "-3",
+              "output_index": 1,
+              "p": "0",
+              "positive_part": "0",
+              "q": "1",
+              "ratio": "0",
+              "support_case": "finite"
+            }
+          ],
+          "tie_indices": [],
+          "to_index": 1,
+          "to_secret": "secret/1"
+        },
+        {
+          "delta": "1",
+          "event_indices": [
+            1
+          ],
+          "event_outputs": [
+            "B/1"
+          ],
+          "event_p": "1",
+          "event_q": "0",
+          "from_index": 1,
+          "from_secret": "secret/1",
+          "pure_factor": null,
+          "singular_mass": "1",
+          "terms": [
+            {
+              "excess": "-3",
+              "output_index": 0,
+              "p": "0",
+              "positive_part": "0",
+              "q": "1",
+              "ratio": "0",
+              "support_case": "finite"
+            },
+            {
+              "excess": "1",
+              "output_index": 1,
+              "p": "1",
+              "positive_part": "1",
+              "q": "0",
+              "ratio": null,
+              "support_case": "singular"
+            }
+          ],
+          "tie_indices": [],
+          "to_index": 0,
+          "to_secret": "secret/0"
+        }
+      ],
+      "pure_factor": null,
+      "pure_factor_status": "infinite_due_to_support_mismatch",
+      "pure_witnesses": [],
+      "schema_version": 1,
+      "scope": "finite channel and listed undirected neighbor edges only; not an audit of a deployed implementation",
+      "unlisted_secret_pairs": [],
+      "worst_pairs": [
+        0,
+        1
+      ]
+    },
+    "formula": "A = secret XOR Z; B = Z; recover secret = A XOR B",
+    "noise_zero_probability": "3/4",
+    "warning": "marginal guarantees do not justify composing correlated releases; the conditional second release is not private"
+  }
+}

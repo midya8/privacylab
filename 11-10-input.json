@@ -1,0 +1,1 @@
+{"schema_version":1,"factor":"3","channel":{"schema_version":1,"secrets":["secret/0","secret/1"],"outputs":["0","1"],"neighbors":[[0,1]],"probabilities":[["3/4","1/4"],["1/4","3/4"]]}}
