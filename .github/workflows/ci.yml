@@ -19,6 +19,10 @@ jobs:
           cmp /tmp/demo.json examples/demo.json
           python -m privacylab audit examples/input.json > /tmp/input.json
           python examples/render_figure.py --check
+          python -m privacylab adaptive-demo > /tmp/adaptive-demo.json
+          cmp /tmp/adaptive-demo.json examples/adaptive-demo.json
+          python -m privacylab adaptive examples/adaptive-input.json > /tmp/adaptive-input.json
+          python examples/render_adaptive.py --check
   package:
     runs-on: ubuntu-latest
     steps:
@@ -30,9 +34,15 @@ jobs:
       - run: |
           python -m privacylab demo > /tmp/source-demo.json
           python -m privacylab audit examples/input.json > /tmp/source-input.json
+          python -m privacylab adaptive-demo > /tmp/source-adaptive-demo.json
+          python -m privacylab adaptive examples/adaptive-input.json > /tmp/source-adaptive-input.json
           python -m pip install --no-deps --target /tmp/installed /tmp/wheels/*.whl
           cd /tmp
           PYTHONPATH=/tmp/installed python -m privacylab demo > /tmp/wheel-demo.json
           PYTHONPATH=/tmp/installed python -m privacylab audit "$GITHUB_WORKSPACE/examples/input.json" > /tmp/wheel-input.json
+          PYTHONPATH=/tmp/installed python -m privacylab adaptive-demo > /tmp/wheel-adaptive-demo.json
+          PYTHONPATH=/tmp/installed python -m privacylab adaptive "$GITHUB_WORKSPACE/examples/adaptive-input.json" > /tmp/wheel-adaptive-input.json
+          cmp /tmp/source-adaptive-demo.json /tmp/wheel-adaptive-demo.json
+          cmp /tmp/source-adaptive-input.json /tmp/wheel-adaptive-input.json
           cmp /tmp/source-demo.json /tmp/wheel-demo.json
           cmp /tmp/source-input.json /tmp/wheel-input.json
