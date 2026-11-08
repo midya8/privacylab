@@ -76,14 +76,43 @@ The stochastic vote is exactly the original randomized-response channel. Parity 
 - Factors are exact rationals in `[1,10^12]`. Reports are point queries, not an interpolated full privacy curve or an adaptive stopping rule.
 - The strict audit CLI wrapper has exactly `schema_version` (integer 1), `channel`, `factor`. Input cap 100000 bytes; duplicate/unknown/missing keys, nonfinite JSON, bad UTF-8 and invalid values fail with exit 2 and empty stdout.
 
-## Verification
+## Original static-channel verification
 
-29 tests: 14 core probability/audit tests, 9 transform tests, 3 CLI tests and 3 SVG tests. Twenty-four seeded three-secret/four-output channels are checked against exhaustive enumeration of all 16 events per directed pair at four exact factors. Every demo term/event/support field is reconstructed. Tests also cover a `10^-100` singular leak retained exactly, minimal pure-factor witnesses, factor monotonicity/convexity, adjacency omissions, permutations, exact decimal parsing, full 8-secret/64-output capacity, strict validation and nonmutation/RNG state.
+The original 29 tests: 14 core probability/audit tests, 9 transform tests, 3 CLI tests and 3 SVG tests. Twenty-four seeded three-secret/four-output channels are checked against exhaustive enumeration of all 16 events per directed pair at four exact factors. Every demo term/event/support field is reconstructed. Tests also cover a `10^-100` singular leak retained exactly, minimal pure-factor witnesses, factor monotonicity/convexity, adjacency omissions, permutations, exact decimal parsing, full 8-secret/64-output capacity, strict validation and nonmutation/RNG state.
 
-Transform tests reconstruct every product probability/mapping; compare repeated randomized response through four releases with exact binomial count channels; test 24 seeded stochastic postprocessing contractions; verify shared-coin reconstruction and its conditional failure; and cover identity/constant/permutation kernels, alignment, output capacity and computed rational limits. SVG checks verify all 36 exact cells and their coordinates, full compressed JSON metadata, a hidden attaining-event tamper, and byte-exact regeneration. The five-module wheel reproduces both complete CLI JSON outputs outside checkout. CI runs the suite on Python 3.10-3.13 plus installed-wheel parity.
+Transform tests reconstruct every product probability/mapping; compare repeated randomized response through four releases with exact binomial count channels; test 24 seeded stochastic postprocessing contractions; verify shared-coin reconstruction and its conditional failure; and cover identity/constant/permutation kernels, alignment, output capacity and computed rational limits. SVG checks verify all 36 exact cells and their coordinates, full compressed JSON metadata, a hidden attaining-event tamper, and byte-exact regeneration. The original five-module wheel reproduced both complete CLI JSON outputs outside checkout. Version 0.2 wheel and CI coverage are described below.
 
 ## What this does not certify
 
-A table certificate applies to the supplied finite mechanism and listed neighbor graph only. It does not prove that a program samples that table, that randomness is secure/fresh/independent, that a neighboring-dataset relation covers a real application, or that unlisted possible inputs are protected. No trained-model guarantee, DP-SGD accountant, continuous Gaussian mechanism, privacy-loss convolution, advanced/adaptive composition implementation, privacy-utility optimum or production security claim. A low delta is not a probability that any particular person's secret leaks, and differential privacy does not promise that useful population facts remain hidden.
+A table certificate applies to the supplied finite mechanism and listed neighbor graph only. It does not prove that a program samples that table, that randomness is secure/fresh/independent, that a neighboring-dataset relation covers a real application, or that unlisted possible inputs are protected. No trained-model guarantee, DP-SGD accountant, continuous Gaussian mechanism, privacy-loss convolution, advanced composition, adaptively chosen privacy parameters, privacy-utility optimum or production security claim. A low delta is not a probability that any particular person's secret leaks, and differential privacy does not promise that useful population facts remain hidden.
 
 This implements established finite-distribution DP and hockey-stick divergence arithmetic, not a new privacy theorem. Primary references: Dwork and Roth's [Algorithmic Foundations of Differential Privacy](https://homepage.divms.uiowa.edu/~sriram/5980/spring17/privacybook.pdf), definition 2.4 and proposition 2.1; [modern privacy accounting notes](https://arxiv.org/pdf/2210.00597), proposition 7 and theorem 9; and Google Research's [privacy accounting overview](https://research.google/blog/differential-privacy-accounting-by-connecting-the-dots/). See [DESIGN.md](DESIGN.md) for the finite proof and implementation boundaries.
+
+## Exact adaptive transcript extension
+
+Version 0.2 adds `adaptive(tree, factors)` and two CLI commands. Each conditional node supplies the full next-output distribution **given the secret and entire prior transcript**, not an unconditional marginal. Factors are fixed per round, independent of history. Every possible history is required, including histories with zero probability under every secret.
+
+![Exact adaptive transcripts and killed-mass bounds](assets/adaptive-transcripts.svg)
+
+```sh
+python -m privacylab adaptive-demo
+python -m privacylab adaptive examples/adaptive-input.json
+python examples/render_adaptive.py --check
+```
+
+The implementation unfolds the exact transcript channel, audits every conditional kernel, and constructs a directional clipped subdistribution. For directed secrets P,Q, each local kernel becomes `min(K_P, t_i*K_Q)` without normalization. Multiplying those subkernels along the tree gives leaf mass `g` with `g <= P` and `g <= T*Q`, where `T=product(t_i)`. Thus the actual joint delta at T is at most `1-sum(g)`. Every incoming mass, clipped kernel, removed mass, per-round loss and leaf domination slack is retained. The maximum directional deficit is compared with uniform per-round survival and clamped additive bounds. [The proof and exact input contract](ADAPTIVE.md) distinguish these bounds from the actual profile.
+
+| Developed two-round tree | Product factor T | Actual delta | Clipped bound | Uniform bound | Additive bound |
+|---|---:|---:|---:|---:|---:|
+| Independent pure randomized response | 9 | 0 | 0 | 0 | 0 |
+| Adaptive randomized response or constant | 3 | 3/8 | 1/2 | 1/2 | 1/2 |
+| Independent response at factor one | 1 | 1/2 | 3/4 | 3/4 | 1 |
+| Fair branch, reveal on one side | 1 | 1/2 | 1/2 | 1 | 1 |
+| Reveal only on an impossible history | 1 | 0 | 0 | 1 | 1 |
+| Shared coin, actual conditional laws | 3 | 1 | 1 | 1 | 1 |
+
+The fair-branch control charges a local delta of 1 to incoming mass 1/2, so removed mass is 1/2. An impossible revealing node is still audited, but contributes zero killed mass. The shared-coin control has revealing conditional laws on reachable histories, so no marginal-composition shortcut passes. A strict gap between actual delta and a bound is shown, not hidden.
+
+46 tests now include the original 29, 14 adaptive behavior tests and three adaptive SVG tests. Twenty-four seeded three-round, three-secret trees are checked against recursive path enumeration and exhaustive all-256-event searches per directed pair. Tests reconstruct all conditional events, flow conservation and leaf inequalities; exercise six rounds, 64 transcripts, eight secrets and all 28 edges; check secret/output permutations, null histories, omitted adjacency, unary rounds, exact tiny mass, invalid input and computed-rational limits. Both figures regenerate byte-exactly. The six-module installed wheel matches all four complete CLI JSON outputs outside checkout.
+
+This is finite supplied-kernel analysis, not verification that an external program uses those conditional laws. Limits are six rounds, eight outcomes per round, 64 transcripts, 128 conditional nodes and 512-bit constructed probability/flow components. Canonical output fractions can be longer than the 160-character input-string cap; use API `Fraction` values to resubmit those exact values. There is no unbounded interaction, adaptive parameter selection, stopping-time filter, privacy odometer, advanced composition or optimal-composition implementation. Existing DP composition and subdistribution reasoning are credited, not claimed as new: see [Dwork and Roth, section 3.5](https://homepage.divms.uiowa.edu/~sriram/5980/spring17/privacybook.pdf) and [fully adaptive composition context](https://arxiv.org/html/2203.05481v3). This extension does not implement that paper's filters or odometers.
