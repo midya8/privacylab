@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "tree": {
+    "neighbors": [
+      [
+        0,
+        1
+      ]
+    ],
+    "round_outputs": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "schema_version": 1,
+    "secrets": [
+      "bit0",
+      "bit1"
+    ],
+    "steps": [
+      [
+        {
+          "history": [],
+          "probabilities": [
+            [
+              "3/4",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "3/4"
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "history": [
+            0
+          ],
+          "probabilities": [
+            [
+              "3/4",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "3/4"
+            ]
+          ]
+        },
+        {
+          "history": [
+            1
+          ],
+          "probabilities": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "factors": [
+    "1",
+    "3"
+  ]
+}
