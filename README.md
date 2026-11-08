@@ -73,7 +73,7 @@ The stochastic vote is exactly the original randomized-response channel. Parity 
 - Between 2 and 8 secrets, 1..64 outputs, 1..28 undirected edges. Both edge directions are audited. Self edges, duplicate undirected edges, invalid indices and empty graphs are rejected. Helpers require identical ordered secrets and canonical neighbor edges.
 - Unique ASCII labels are 1..40 characters using letters, digits, spaces and `_.:/-`. Labels are identifiers, not private-data discovery requests.
 - Probabilities are integers, exact decimal/fraction strings or API `Fraction` values. Floats and booleans are rejected. Rows must sum **exactly** to 1; no clipping, renormalization or tolerance. Fraction syntax is unsigned, with a positive denominator; no exponent notation or surrounding whitespace. Each rational numerator/denominator is limited to 512 bits; strings to 160 characters. Computed transform outputs must also satisfy that limit, or the helper fails explicitly.
-- Factors are exact rationals in `[1,10^12]`. Reports are point queries, not an interpolated full privacy curve or an adaptive stopping rule.
+- Factors are exact rationals in `[1,10^12]`. The original audit reports are point queries, not interpolated curves or adaptive stopping rules; the smaller-domain frontier extension below has separate full-curve semantics.
 - The strict audit CLI wrapper has exactly `schema_version` (integer 1), `channel`, `factor`. Input cap 100000 bytes; duplicate/unknown/missing keys, nonfinite JSON, bad UTF-8 and invalid values fail with exit 2 and empty stdout.
 
 ## Original static-channel verification
@@ -116,3 +116,31 @@ The fair-branch control charges a local delta of 1 to incoming mass 1/2, so remo
 46 tests now include the original 29, 14 adaptive behavior tests and three adaptive SVG tests. Twenty-four seeded three-round, three-secret trees are checked against recursive path enumeration and exhaustive all-256-event searches per directed pair. Tests reconstruct all conditional events, flow conservation and leaf inequalities; exercise six rounds, 64 transcripts, eight secrets and all 28 edges; check secret/output permutations, null histories, omitted adjacency, unary rounds, exact tiny mass, invalid input and computed-rational limits. Both figures regenerate byte-exactly. The six-module installed wheel matches all four complete CLI JSON outputs outside checkout.
 
 This is finite supplied-kernel analysis, not verification that an external program uses those conditional laws. Limits are six rounds, eight outcomes per round, 64 transcripts, 128 conditional nodes and 512-bit constructed probability/flow components. Canonical output fractions can be longer than the 160-character input-string cap; use API `Fraction` values to resubmit those exact values. There is no unbounded interaction, adaptive parameter selection, stopping-time filter, privacy odometer, advanced composition or optimal-composition implementation. Existing DP composition and subdistribution reasoning are credited, not claimed as new: see [Dwork and Roth, section 3.5](https://homepage.divms.uiowa.edu/~sriram/5980/spring17/privacybook.pdf) and [fully adaptive composition context](https://arxiv.org/html/2203.05481v3). This extension does not implement that paper's filters or odometers.
+
+## Exact factor-frontier extension
+
+Version 0.3 adds `frontier(channel)` and `minimum_factor(channel, target_delta)`. For small supplied tables, it computes the **complete worst-directed-neighbor profile for every finite factor t >= 1**, not an interpolation between point queries. The new frontier domain is at most four secrets and eight outputs; the original point-audit and adaptive-tree domains are unchanged.
+
+![Exact privacy-factor envelope and inverse delta budgets](assets/factor-frontier.svg)
+
+```sh
+python -m privacylab frontier-demo
+python -m privacylab frontier examples/frontier-input.json
+python examples/render_frontier.py --check
+```
+
+A directed pair has profile `sum(max(P-tQ,0))`, affine between its likelihood-ratio knots. The global profile is the upper envelope over all listed directions. **Pair profiles can cross between ratio knots.** The implementation considers those intersections, then certifies every complete global affine interval against every overlapping local piece using endpoint slacks and an infinite-tail slope check. Reports retain each local event set, local/global coefficients, interval boundaries, whole-interval domination witnesses, exact knot events/ties, singular plateau, pure factor and omitted neighbor pairs.
+
+The developed three-secret/four-output control has rows `[1/16,5/16,1/8,1/2]`, `[5/16,3/8,1/16,1/4]`, `[1/8,5/16,3/16,3/8]` and listed edges 0-1,1-2. Its global profile is:
+
+| Factor interval | Exact delta(t) | Interior maximizing direction |
+|---|---|---|
+| 1 to 5/4 | 5/8 - 5t/16 | secret 0 to secret 1 |
+| 5/4 to 5 | 5/16 - t/16 | secret 1 to secret 0 |
+| 5 onward | 0 | every listed direction |
+
+The switch at **5/4 is absent** from the individual ratio grid `{1,6/5,3/2,2,5/2,3,5}`. Target delta 1/4 needs minimum factor 6/5; target 15/64 needs 5/4; target zero needs 5. Inverse results retain actual attaining events plus either the domain lower bound t=1 or a positive-left-slope root certifying minimality. A target below a singular-support plateau is explicitly unattainable, with a zero-Q event obstruction. Another control has minimum pure factor `5*10^29`, reported exactly and flagged outside the original point-audit numeric domain. It is not silently clipped to 10^12.
+
+63 tests retain all previous 46 and add 14 frontier behavior plus three SVG tests. Thirty-two seeded four-output channels use exhaustive all-16-event references at endpoints and multiple interior/tail factors, with inverse checks at four targets. Tests reconstruct every interval-domination overlap, continuity and convex slopes; check the non-ratio crossing, singular plateau/equality attainment, tiny exact mass, large factors, full four-secret/eight-output/six-edge capacity including a dense rational table, all-zero-support cases, permutations, omitted edges and strict input/CLI errors. All ten new query cells, global vertices and every directed-curve vertex are checked, alongside complete report metadata, hidden domination-witness tampering and byte-exact SVG regeneration. All three figures regenerate exactly; the seven-module wheel matches all six complete CLI JSON outputs outside checkout.
+
+[Full frontier proof and contract](FRONTIER.md). These are exact small finite-table profiles, not optimal composition over unknown mechanisms, privacy-loss convolution, private training or deployed-program certification. The frontier uses established hockey-stick mathematics and finite affine-envelope reasoning, not a new privacy theorem. [Google Research's accounting overview](https://research.google/blog/differential-privacy-accounting-by-connecting-the-dots/) explains the discrete piecewise-linear connection; this repository does not implement its Connect-the-Dots discretization or a production accountant. Whole-frontier analysis does not expand the original point-audit factor cap or make the adaptive clipping bound an exact optimal-composition profile.
