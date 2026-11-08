@@ -40,7 +40,7 @@ assert audit(joint, '9')['delta'] == '0'
 
 ## Factor is not epsilon
 
-The API accepts an exact rational factor `t = exp(epsilon) >= 1`, not epsilon itself. Factor3 means epsilon `ln(3)`; factor9 means epsilon `ln(9)`. No approximate exponential or logarithm participates in a decision.
+The API accepts an exact rational factor `t = exp(epsilon) >= 1`, not epsilon itself. Factor 3 means epsilon `ln(3)`; factor 9 means epsilon `ln(9)`. No approximate exponential or logarithm participates in a decision.
 
 For each listed undirected neighbor edge, inspect **both directions** `P,Q`. At factor `t`, the smallest valid slack for that pair is
 
@@ -55,7 +55,7 @@ The report's delta is the maximum over all directed neighbor pairs. It retains e
 
 All numbers below are exact for small supplied channels, not empirical privacy measurements.
 
-| Channel | Minimal pure factor | delta at factor 1 | delta at factor 3 | delta at factor9 |
+| Channel | Minimal pure factor | delta at factor 1 | delta at factor 3 | delta at factor 9 |
 | --- | --- | --- | --- | --- |
 | Randomized response, truthful probability 3/4 | 3 | 1/2 | 0 | 0 |
 | Two independent randomized-response releases | 9 | 1/2 | 3/8 | 0 |
