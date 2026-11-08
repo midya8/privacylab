@@ -23,6 +23,10 @@ jobs:
           cmp /tmp/adaptive-demo.json examples/adaptive-demo.json
           python -m privacylab adaptive examples/adaptive-input.json > /tmp/adaptive-input.json
           python examples/render_adaptive.py --check
+          python -m privacylab frontier-demo > /tmp/frontier-demo.json
+          cmp /tmp/frontier-demo.json examples/frontier-demo.json
+          python -m privacylab frontier examples/frontier-input.json > /tmp/frontier-input.json
+          python examples/render_frontier.py --check
   package:
     runs-on: ubuntu-latest
     steps:
@@ -36,12 +40,18 @@ jobs:
           python -m privacylab audit examples/input.json > /tmp/source-input.json
           python -m privacylab adaptive-demo > /tmp/source-adaptive-demo.json
           python -m privacylab adaptive examples/adaptive-input.json > /tmp/source-adaptive-input.json
+          python -m privacylab frontier-demo > /tmp/source-frontier-demo.json
+          python -m privacylab frontier examples/frontier-input.json > /tmp/source-frontier-input.json
           python -m pip install --no-deps --target /tmp/installed /tmp/wheels/*.whl
           cd /tmp
           PYTHONPATH=/tmp/installed python -m privacylab demo > /tmp/wheel-demo.json
           PYTHONPATH=/tmp/installed python -m privacylab audit "$GITHUB_WORKSPACE/examples/input.json" > /tmp/wheel-input.json
           PYTHONPATH=/tmp/installed python -m privacylab adaptive-demo > /tmp/wheel-adaptive-demo.json
           PYTHONPATH=/tmp/installed python -m privacylab adaptive "$GITHUB_WORKSPACE/examples/adaptive-input.json" > /tmp/wheel-adaptive-input.json
+          PYTHONPATH=/tmp/installed python -m privacylab frontier-demo > /tmp/wheel-frontier-demo.json
+          PYTHONPATH=/tmp/installed python -m privacylab frontier "$GITHUB_WORKSPACE/examples/frontier-input.json" > /tmp/wheel-frontier-input.json
+          cmp /tmp/source-frontier-demo.json /tmp/wheel-frontier-demo.json
+          cmp /tmp/source-frontier-input.json /tmp/wheel-frontier-input.json
           cmp /tmp/source-adaptive-demo.json /tmp/wheel-adaptive-demo.json
           cmp /tmp/source-adaptive-input.json /tmp/wheel-adaptive-input.json
           cmp /tmp/source-demo.json /tmp/wheel-demo.json
