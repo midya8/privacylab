@@ -4,7 +4,7 @@
 
 A channel row is the exact distribution of a finite output given one supplied secret. `neighbors` specifies undirected edges between secret indices. Every edge expands to both directed pairs. This graph may model neighboring databases, a local secret, or another explicit relation; the implementation does not infer or enlarge it. Disconnected/omitted pairs are reported, not silently certified. A finite table need not cover all possible real datasets.
 
-For a supplied exact rational factor `t >= 1`, set epsilon symbolically to`ln(t)`. The DP inequality for every directed neighbor pair and every output event E is
+For a supplied exact rational factor `t >= 1`, set epsilon symbolically to `ln(t)`. The DP inequality for every directed neighbor pair and every output event E is
 
 ```text
 P(E) <= t Q(E) + delta.
@@ -20,7 +20,7 @@ Taking the maximum over both directions of every listed edge yields the smallest
 
 Pure DP means delta 0 for all those events. When Q_k>0, this is equivalent to `t >= P_k/Q_k`. A positive P_k with Q_k=0 rules out every finite pure factor. P=Q=0 contributes neither a ratio nor a leak; it has a separate `both_zero` status. Otherwise the maximum finite ratio over every directed neighbor/output is the minimal pure factor. It is at least 1 because normalized distributions cannot all have P_k<Q_k. Output-level witnesses attain the maximum. For a fixed pair, singular mass is the sum of P where Q=0; it survives every finite factor.
 
-These exact point queries determine delta only at the requested factors. Although the mathematical profile is convex, nonincreasing and piecewise-linear in t, the software does not interpolate between requested points or return a globally enumerated curve. It does not compute a privacy-loss convolution or advanced-composition bound.
+These exact point queries determine delta only at the requested factors. Although the mathematical profile is convex, nonincreasing and piecewise-linear in t, the original point-query API does not interpolate between requested points or return a globally enumerated curve. The separate `frontier` API enumerates the full curve on its smaller domain; [FRONTIER.md](FRONTIER.md) defines that contract. It does not compute a privacy-loss convolution or advanced-composition bound.
 
 ## Independent joint release
 
@@ -62,13 +62,13 @@ secret 0:       3/4     0     0   1/4
 secret 1:         0   1/4   3/4     0
 ```
 
-The attaining event `{00,11}` has P = 1, Q = 0, so delta 1 at any finite factor; A XOR B reconstructs x on every nonzero-probability output. Conditioned on A=0, B is deterministically0 under x=0 and1 under x=1. That conditional second mechanism is not private. Combining marginal guarantees as if fresh independent noise or valid conditional privacy were established is the mistake. No composition theorem is contradicted.
+The attaining event `{00,11}` has P = 1, Q = 0, so delta 1 at any finite factor; A XOR B reconstructs x on every nonzero-probability output. Conditioned on A=0, B is deterministically 0 under x=0 and 1 under x=1. That conditional second mechanism is not private. Combining marginal guarantees as if fresh independent noise or valid conditional privacy were established is the mistake. No composition theorem is contradicted.
 
 ## Arithmetic and validation
 
-Integers, exact unsigned decimal/fraction strings and API `Fraction` values are accepted; floats and booleans are rejected instead of being silently rounded or interpreted as decimal ideals. Probability rows sum exactly to 1. No renormalization, epsilon tolerance, clipping or fallback. Up to 8 secrets, 64 outputs, 28 undirected edges and 512-bit rational components bound work. String input length 160 and CLI byte cap 100000 prevent unbounded numeric parsing. Factors are in[1,10^12]. Labels are unique bounded ASCII identifiers, never executable expressions. Serialized outputs use canonical reduced fractions.
+Integers, exact unsigned decimal/fraction strings and API `Fraction` values are accepted; floats and booleans are rejected instead of being silently rounded or interpreted as decimal ideals. Probability rows sum exactly to 1. No renormalization, epsilon tolerance, clipping or fallback. Up to 8 secrets, 64 outputs, 28 undirected edges and 512-bit rational components bound work. String input length 160 and CLI byte cap 100000 prevent unbounded numeric parsing. Factors are in [1,10^12]. Labels are unique bounded ASCII identifiers, never executable expressions. Serialized outputs use canonical reduced fractions.
 
-No stochastic sampling or global RNG use occurs. A five-module wheel contains `core`, `transforms`, `demo`, `__init__`, `__main__`. Both full JSON CLI outputs are compared outside the checkout in CI. Complete report data is compressed into the SVG metadata so hidden witness edits change the reproducible asset; all 36 visible numeric cells and positions are checked too. There is no performance benchmark or implementation-level security claim.
+No stochastic sampling or global RNG use occurs. The original five-module wheel contained `core`, `transforms`, `demo`, `__init__`, `__main__`. The current seven-module wheel reproduces all six complete CLI outputs outside the checkout in CI. Complete report data is compressed into the SVG metadata so hidden witness edits change the reproducible asset; all 36 visible numeric cells and positions are checked too. There is no performance benchmark or implementation-level security claim.
 
 ## Sources and scope
 
