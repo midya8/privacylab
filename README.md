@@ -2,7 +2,8 @@
 
 An exact finite-channel differential-privacy reference. Supply rational probability tables and explicit neighboring-secret edges; inspect the smallest delta at a multiplicative privacy factor, every attaining event, and the complete directed-pair arithmetic. Independent product and stochastic postprocessing helpers make randomness assumptions visible.
 
-**Private marginals can reveal a secret jointly.** In the developed shared-coin control, `A = secret XOR Z` and `B = Z`, with `P(Z=0)=3/4`. The first marginal has pure factor 3 and the second has factor 1, yet the joint output reveals `secret = A XOR B` exactly. Its two conditional distributions have disjoint supports and delta 1 at every finite factor. This does not contradict a composition theorem: the required conditional-mechanism premise is false.
+In the shared-coin control, private marginal releases reveal the secret when
+combined. `A = secret XOR Z` and `B = Z`, with `P(Z=0)=3/4`. The first marginal has pure factor 3 and the second has factor 1, yet the joint output reveals `secret = A XOR B` exactly. Its two conditional distributions have disjoint supports and delta 1 at every finite factor. This does not contradict a composition theorem: the required conditional-mechanism premise is false.
 
 ![Exact privacy factors, deltas and a shared-coin joint-release counterexample](assets/privacy-audit.svg)
 
@@ -38,7 +39,15 @@ assert audit(joint, '3')['delta'] == '3/8'
 assert audit(joint, '9')['delta'] == '0'
 ```
 
-## Factor is not epsilon
+## Point queries, transcripts and full frontiers
+
+`audit` computes delta at one supplied multiplicative factor. `adaptive`
+unfolds supplied conditional kernels and compares the transcript's actual delta
+with clipped-mass bounds. `frontier` computes the full factor/delta curve for a
+smaller table domain. The original point-query limits and adaptive bounds do
+not change when using the frontier calculation.
+
+## Multiplicative factor and epsilon
 
 The API accepts an exact rational factor `t = exp(epsilon) >= 1`, not epsilon itself. Factor 3 means epsilon `ln(3)`; factor 9 means epsilon `ln(9)`. No approximate exponential or logarithm participates in a decision.
 
@@ -113,7 +122,7 @@ The implementation unfolds the exact transcript channel, audits every conditiona
 
 The fair-branch control charges a local delta of 1 to incoming mass 1/2, so removed mass is 1/2. An impossible revealing node is still audited, but contributes zero killed mass. The shared-coin control has revealing conditional laws on reachable histories, so no marginal-composition shortcut passes. A strict gap between actual delta and a bound is shown, not hidden.
 
-46 tests now include the original 29, 14 adaptive behavior tests and three adaptive SVG tests. Twenty-four seeded three-round, three-secret trees are checked against recursive path enumeration and exhaustive all-256-event searches per directed pair. Tests reconstruct all conditional events, flow conservation and leaf inequalities; exercise six rounds, 64 transcripts, eight secrets and all 28 edges; check secret/output permutations, null histories, omitted adjacency, unary rounds, exact tiny mass, invalid input and computed-rational limits. Both figures regenerate byte-exactly. The six-module installed wheel matches all four complete CLI JSON outputs outside checkout.
+The adaptive release had 46 tests, including the original 29, 14 adaptive behavior tests and three adaptive SVG tests. Twenty-four seeded three-round, three-secret trees are checked against recursive path enumeration and exhaustive all-256-event searches per directed pair. Tests reconstruct all conditional events, flow conservation and leaf inequalities; exercise six rounds, 64 transcripts, eight secrets and all 28 edges; check secret/output permutations, null histories, omitted adjacency, unary rounds, exact tiny mass, invalid input and computed-rational limits. Both figures regenerate byte-exactly. The six-module installed wheel matches all four complete CLI JSON outputs outside checkout.
 
 This is finite supplied-kernel analysis, not verification that an external program uses those conditional laws. Limits are six rounds, eight outcomes per round, 64 transcripts, 128 conditional nodes and 512-bit constructed probability/flow components. Canonical output fractions can be longer than the 160-character input-string cap; use API `Fraction` values to resubmit those exact values. There is no unbounded interaction, adaptive parameter selection, stopping-time filter, privacy odometer, advanced composition or optimal-composition implementation. Existing DP composition and subdistribution reasoning are credited, not claimed as new: see [Dwork and Roth, section 3.5](https://homepage.divms.uiowa.edu/~sriram/5980/spring17/privacybook.pdf) and [fully adaptive composition context](https://arxiv.org/html/2203.05481v3). This extension does not implement that paper's filters or odometers.
 
